@@ -21,6 +21,7 @@
 
 ### 4. SQL server
 - Create a new database in SSMS
+- Change filepaths in bulk insert sql file
 - Run the queries in order
 - Download any queried views as a CSV file
 
