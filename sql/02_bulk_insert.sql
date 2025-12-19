@@ -15,8 +15,8 @@ GO
 BULK INSERT dbo.us_port
 FROM 'C:\Users\stanl\Documents\Bastion Analytics\data\lookup_tables\us_ports_lookup.csv'
 WITH (
-    FIRSTROW = 2,           -- skip header
-    FORMAT = 'CSV',         -- handles quoted names with commas
+    FIRSTROW = 2,           -- skips header
+    FORMAT = 'CSV',
     TABLOCK
 );
 GO
@@ -25,11 +25,11 @@ GO
 BULK INSERT dbo.header
 FROM 'C:\Users\stanl\Documents\Bastion Analytics\data\silver_cleaned\ams_header_cleaned.csv'
 WITH (
-    FIRSTROW = 2,              -- skip header row
+    FIRSTROW = 2,              -- skips header
     FORMAT = 'CSV', 
     TABLOCK,
-    BATCHSIZE = 1000000,       -- optional: commit every 1M rows
-    MAXERRORS = 1000,           -- continue if minor errors
+    BATCHSIZE = 1000000,
+    MAXERRORS = 1000,
     DATAFILETYPE = 'char'
 );
 GO
