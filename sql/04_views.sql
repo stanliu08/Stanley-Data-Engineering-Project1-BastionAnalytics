@@ -16,7 +16,7 @@ GO
 
 -- Not all container dimensions had a value > 0 so there's a lot of empty volumes
 -- This is usually because measurements were not recorded at that time
--- THis view will be for avg container volume
+-- This view will be for avg container volume
 CREATE VIEW vw_avg_container_volume_measured AS
 SELECT
     c.source_year,

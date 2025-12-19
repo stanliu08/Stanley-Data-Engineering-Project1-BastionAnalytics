@@ -1,6 +1,8 @@
 USE bastion_analytics;
 GO
 
+-- indexes for reads to become faster, queries run much faster
+
 -- indexing for header
 SELECT TOP (10) *
 FROM header;
@@ -16,7 +18,6 @@ FROM containers
 WHERE container_number = 'FSCU7065532';
 
 -- indexing for containers
-
 -- There's 2673 rows where container_number is NULL, we'll replace with string 'Unknown'
 SELECT *
 FROM dbo.containers

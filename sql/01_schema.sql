@@ -11,7 +11,7 @@ CREATE TABLE dbo.header
 	conveyance_id_qualifier NVARCHAR(64),
 	conveyance_id NVARCHAR(32),
 	carrier_code NVARCHAR(8),
-	mode_of_transportation NVARCHAR(64), -- had an error because I set size to 16, too small
+	mode_of_transportation NVARCHAR(64), -- had an error because I set size to 32, too small
 	vessel_name NVARCHAR(64),
 	vessel_country_code NVARCHAR(2),
 	port_of_unlading NVARCHAR(128),
